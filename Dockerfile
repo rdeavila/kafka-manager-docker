@@ -7,7 +7,7 @@ RUN curl -L https://github.com/yahoo/CMAK/releases/download/${CMAK_VERSION}/cmak
     && ln -s /cmak-$CMAK_VERSION /cmak \
     && rm -rf /tmp/cmak.zip
 
-FROM openjdk:11-jre-slim
+FROM openjdk:16.0.1-oraclelinux7
 MAINTAINER Hleb Albau <hleb.albau@gmail.com>
 
 COPY --from=build /cmak /cmak
